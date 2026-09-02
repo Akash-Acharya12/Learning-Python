@@ -148,8 +148,13 @@ print(result)
 
 #14. List -Frequency Table
 nums=[2,3,2,4,3,2]
-count={num:count(num) for num in nums}
-print(count)
+freq={}
+count=0
+for num in nums:
+    if num in nums:
+        freq.append(num:count)
+        count+=1
+print(f"{num}:{count}") 
 #15.List of lists--Row sums
 l=[[1,2,3],[4,5,6],[7,8,9]]
 row_sum=[]
