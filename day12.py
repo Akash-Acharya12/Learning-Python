@@ -37,9 +37,10 @@ print(a+b)
 
 
 #global and Local Varible
+b="Koushik"
 def any():
     x="Akash" #It is a local variable
     print(x)
-    print(y)#you can access y Which is a global variable
+    print(b)#you can access y Which is a global variable
 #You cant access a local variable which initialised inside the function
-Y="Koushik" #it is an global variable
+ #it is an global variable
