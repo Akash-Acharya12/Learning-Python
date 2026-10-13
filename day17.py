@@ -34,9 +34,11 @@ class Vehicle:
     def start(self):
         print("Starting..")
 class Bike(Vehicle):
+    def __init__(self,name):
+        self.name= name
     def ride(self):
         print("Ride the bike")
-move=Bike()
+move=Bike("MT-15")
 move.start()
 move.ride()
 
@@ -73,6 +75,32 @@ nr=[EmailNortification(),SMSnortification()]
 for nortify in nr:
     nortify.send()
 
+'''
+Polymorphism:
 
+Implement a Shape class and derive Circle and Rectangle classes with a method calculate_area. Each class should calculate area differently based on its shape.
+Create a loop to calculate areas for both Circle and Rectangle objects.
+'''
 class Shape:
-    
+    def calculate_area(self):
+        pass
+
+class Circle(Shape):
+    def __init__(self,r):
+        self.r=r
+    def calculate_area(self,):
+        print(f"Area of circle:{(22/7)*self.r*self.r}")
+
+class Rectangle(Shape):
+    def __init__(self,l,b):
+        self.l=l
+        self.b=b
+    def calculate_area(self):
+        print(f"Area of rectangle:{self.l *self.b}")
+'''c=Circle(3.17,5)
+c.calculate_area()
+r=Rectangle(15,5)
+r.calculate_area()'''
+l=[Circle(15),Rectangle(25,15)]
+for list in l:
+    list.calculate_area()
