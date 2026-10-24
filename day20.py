@@ -159,8 +159,36 @@ def operations():
     print("1.Add student detatils")
     print("2.display student details")
     print("3.Exit")
+students=[]
 def add_student():
-    student={}
+    
+    n=int(input("Enter number of students:"))
+    for i in range(1,n+1):
+        name=input(f"Enter student {i} name:")
+        age=int(input("Enter student age:"))
+        usn=input("Enter student usn:").upper()
+        student={
+            "Name":name,
+            "age":age,
+            "USN":usn
+        }
+        students.append(student)
+
+while True:
+    operations()
+    choice=int(input("Enter your choice (1-3):"))
+    if choice==1:
+        add_student()
+    elif choice==2:
+        if len(students)==0:
+            print("No student records avaiable!")
+        else:
+            for student in students:
+                print(student)
+    elif choice==3:
+        break
+    else:
+        print("Invalid choice")
 
         
         
